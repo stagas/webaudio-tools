@@ -24,6 +24,10 @@
       "import": "./dist/esm/db.js",
       "require": "./dist/cjs/db.js"
     },
+    "./peaking-detector": {
+      "import": "./dist/esm/peaking-detector.js",
+      "require": "./dist/cjs/peaking-detector.js"
+    },
     "./silence-detector": {
       "import": "./dist/esm/silence-detector.js",
       "require": "./dist/cjs/silence-detector.js"
@@ -33,6 +37,9 @@
     "*": {
       "db": [
         "./dist/cjs/db.d.ts"
+      ],
+      "peaking-detector": [
+        "./dist/cjs/peaking-detector.d.ts"
       ],
       "silence-detector": [
         "./dist/cjs/silence-detector.d.ts"
