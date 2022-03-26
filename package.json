@@ -20,6 +20,10 @@
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     },
+    "./db": {
+      "import": "./dist/esm/db.js",
+      "require": "./dist/cjs/db.js"
+    },
     "./silence-detector": {
       "import": "./dist/esm/silence-detector.js",
       "require": "./dist/cjs/silence-detector.js"
@@ -27,6 +31,9 @@
   },
   "typesVersions": {
     "*": {
+      "db": [
+        "./dist/cjs/db.d.ts"
+      ],
       "silence-detector": [
         "./dist/cjs/silence-detector.d.ts"
       ]
