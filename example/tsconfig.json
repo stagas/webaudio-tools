@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.dist.json",
+  "compilerOptions": {
+    "paths": {
+      "name-of-module": [
+        ".."
+      ]
+    }
+  }
+}
