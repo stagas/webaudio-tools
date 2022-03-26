@@ -27,16 +27,44 @@ $ npm i webaudio-tools
 
 #### Table of Contents
 
-- [SilenceDetectorNode](#silencedetectornode)
+- [dbToFloat](#dbtofloat)
   - [Parameters](#parameters)
+- [floatToDb](#floattodb)
+  - [Parameters](#parameters-1)
+- [SilenceDetectorNode](#silencedetectornode)
+  - [Parameters](#parameters-2)
   - [isSilent](#issilent)
   - [silenceThresholdSeconds](#silencethresholdseconds)
   - [onsilent](#onsilent)
   - [onplaying](#onplaying)
 
+### dbToFloat
+
+[src/db.ts:7-7](https://github.com/stagas/webaudio-tools/blob/2f914552673cb7e29df1f98308bbd056cec2e905/src/db.ts#L7-L7 "Source code on GitHub")
+
+Convert dBFS value `db` to float.
+
+#### Parameters
+
+- `db` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Value in dBFS
+
+Returns **any** the value in float
+
+### floatToDb
+
+[src/db.ts:15-15](https://github.com/stagas/webaudio-tools/blob/2f914552673cb7e29df1f98308bbd056cec2e905/src/db.ts#L15-L15 "Source code on GitHub")
+
+Convert float value `float` to dBFS.
+
+#### Parameters
+
+- `float` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)** Value in float
+
+Returns **any** the value in dBFS
+
 ### SilenceDetectorNode
 
-[src/silence-detector.ts:18-67](https://github.com/stagas/webaudio-tools/blob/8c5ac5282438b66bf1be9330233f33f34be020e5/src/silence-detector.ts#L18-L67 "Source code on GitHub")
+[src/silence-detector.ts:18-67](https://github.com/stagas/webaudio-tools/blob/2f914552673cb7e29df1f98308bbd056cec2e905/src/silence-detector.ts#L18-L67 "Source code on GitHub")
 
 **Extends GainNode**
 
@@ -62,19 +90,19 @@ oscillatorNode.stop()
 
 #### isSilent
 
-[src/silence-detector.ts:20-20](https://github.com/stagas/webaudio-tools/blob/8c5ac5282438b66bf1be9330233f33f34be020e5/src/silence-detector.ts#L20-L20 "Source code on GitHub")
+[src/silence-detector.ts:20-20](https://github.com/stagas/webaudio-tools/blob/2f914552673cb7e29df1f98308bbd056cec2e905/src/silence-detector.ts#L20-L20 "Source code on GitHub")
 
 Indicates whether there is silence or not
 
 #### silenceThresholdSeconds
 
-[src/silence-detector.ts:22-22](https://github.com/stagas/webaudio-tools/blob/8c5ac5282438b66bf1be9330233f33f34be020e5/src/silence-detector.ts#L22-L22 "Source code on GitHub")
+[src/silence-detector.ts:22-22](https://github.com/stagas/webaudio-tools/blob/2f914552673cb7e29df1f98308bbd056cec2e905/src/silence-detector.ts#L22-L22 "Source code on GitHub")
 
 How much silent time in seconds in order to detect silence (default: 0.5)
 
 #### onsilent
 
-[src/silence-detector.ts:25-25](https://github.com/stagas/webaudio-tools/blob/8c5ac5282438b66bf1be9330233f33f34be020e5/src/silence-detector.ts#L25-L25 "Source code on GitHub")
+[src/silence-detector.ts:25-25](https://github.com/stagas/webaudio-tools/blob/2f914552673cb7e29df1f98308bbd056cec2e905/src/silence-detector.ts#L25-L25 "Source code on GitHub")
 
 Event callback that fires when node becomes silent
 
@@ -82,7 +110,7 @@ Returns **void**&#x20;
 
 #### onplaying
 
-[src/silence-detector.ts:27-27](https://github.com/stagas/webaudio-tools/blob/8c5ac5282438b66bf1be9330233f33f34be020e5/src/silence-detector.ts#L27-L27 "Source code on GitHub")
+[src/silence-detector.ts:27-27](https://github.com/stagas/webaudio-tools/blob/2f914552673cb7e29df1f98308bbd056cec2e905/src/silence-detector.ts#L27-L27 "Source code on GitHub")
 
 Event callback that fires when node receives audio
 
