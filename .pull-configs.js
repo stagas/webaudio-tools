@@ -11,28 +11,38 @@ merge('package.json', (prev, next) => {
   prev.trustedDependencies = [
     ...new Set([...prev.trustedDependencies, ...(next.trustedDependencies ?? [])]),
   ].sort()
+  prev.types = next.types
   prev.scripts = next.scripts
+  prev.files = next.files
   sort(assign(prev.devDependencies, next.devDependencies))
+
+  // deprecated
+  delete prev.devDependencies['@stagas/documentation-fork']
 })
+replace('.gitattributes')
 replace('.gitignore')
+replace('.npmrc')
 replace('.eslintrc.js')
 replace('.pull-configs.js')
+replace('.swcrc')
 replace('dprint.json')
 replace('jest.config.js')
 replace('tsconfig.json')
 replace('tsconfig.dist.json')
 replace('web-test-runner.config.js')
-merge('.vscode/settings.json')
+replace('LICENSE')
 
 const deprecated = [
   '.vscode/extensions.json',
+  '.vscode',
   '.prettierrc',
   '.prettierignore',
+  'example/tsconfig.json',
   'vite.config.js',
 ]
 deprecated.forEach(x => {
   try {
-    fs.unlinkSync(x)
+    fs.rmSync(x, { recursive: true })
     console.log('removed', x)
   } catch {}
 })

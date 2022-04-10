@@ -1,6 +1,9 @@
 /**
  * SilenceDetectorNode.
  *
+ * Emits `silent` when signal is producing silence for a given amount of time
+ * and emits `playing` when it starts playing.
+ *
  * ```ts
  * const silenceDetectorNode = new SilenceDetectorNode(ctx)
  * silenceDetectorNode.silenceThresholdSeconds = 0.5

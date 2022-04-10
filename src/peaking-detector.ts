@@ -3,6 +3,8 @@ import { dbToFloat } from './db'
 /**
  * PeakingDetectorNode.
  *
+ * Detects if signal is peaking above a threshold and emits `peaking` event.
+ *
  * ```ts
  * const peakingDetectorNode = new PeakingDetectorNode(ctx)
  * peakingDetectorNode.decibelsThreshold = -1
