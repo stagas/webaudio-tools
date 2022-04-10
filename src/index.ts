@@ -1,4 +1,5 @@
 export * from './db'
+export * from './fetch-audio-buffer'
 export * from './fft-log-indexer'
 export * from './peaking-detector'
 export * from './silence-detector'
