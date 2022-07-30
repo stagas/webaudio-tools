@@ -4,12 +4,12 @@ export const MidiOp = {
 }
 
 // TODO: this is also in globals.d.ts, no idea why sometimes TS doesn't pick it up
-// so we declare it again here..
-// declare class MIDIMessageEvent extends Event implements WebMidi.MIDIMessageEvent {
-//   data: Uint8Array
-//   receivedTime: number
-//   constructor(kind: string, payload?: { data: Uint8Array })
-// }
+// NOTE: it doesn't compile without it
+declare class MIDIMessageEvent extends Event implements WebMidi.MIDIMessageEvent {
+  data: Uint8Array
+  receivedTime: number
+  constructor(kind: string, payload?: { data: Uint8Array })
+}
 
 export const createMidiEvent = (time: number, data: number[]) => {
   const event = new MIDIMessageEvent('midimessage', { data: new Uint8Array(data) }) as WebMidi.MIDIMessageEvent
