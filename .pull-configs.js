@@ -18,6 +18,23 @@ merge('package.json', (prev, next) => {
 
   // deprecated
   delete prev.devDependencies['@stagas/documentation-fork']
+  delete prev.devDependencies['@rollup/plugin-commonjs']
+  delete prev.devDependencies['@stagas/sucrase-jest-plugin']
+  delete prev.devDependencies['@web/dev-server-esbuild']
+  delete prev.devDependencies['@web/dev-server-rollup']
+  delete prev.devDependencies['esbuild']
+  delete prev.devDependencies['esbuild-register']
+  delete prev.devDependencies['prettier']
+  delete prev.devDependencies['terser']
+  delete prev.devDependencies['vite-web-test-runner-plugin']
+  delete prev.devDependencies['@swc-node/jest']
+  delete prev.devDependencies['chokidar']
+  delete prev.devDependencies['jest']
+  delete prev.devDependencies['jest-browser-globals']
+  delete prev.devDependencies['ts-jest']
+  delete prev.devDependencies['ts-node']
+  delete prev.devDependencies['wtr-plugin-vite']
+  delete prev.devDependencies['@stagas/jest-node-exports-resolver']
 })
 replace('.gitattributes')
 replace('.gitignore')
@@ -26,10 +43,8 @@ replace('.eslintrc.js')
 replace('.pull-configs.js')
 replace('.swcrc')
 replace('dprint.json')
-replace('jest.config.js')
 replace('tsconfig.json')
 replace('tsconfig.dist.json')
-replace('web-test-runner.config.js')
 replace('LICENSE')
 
 const deprecated = [
@@ -39,6 +54,8 @@ const deprecated = [
   '.prettierignore',
   'example/tsconfig.json',
   'vite.config.js',
+  'jest.config.js',
+  'web-test-runner.config.js',
 ]
 deprecated.forEach(x => {
   try {
