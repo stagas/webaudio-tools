@@ -5,10 +5,14 @@ export const MidiOp = {
 
 // TODO: this is also in globals.d.ts, no idea why sometimes TS doesn't pick it up
 // NOTE: it doesn't compile without it
-declare class MIDIMessageEvent extends Event implements WebMidi.MIDIMessageEvent {
+export class MIDIMessageEvent {
   data: Uint8Array
-  receivedTime: number
-  constructor(kind: string, payload?: { data: Uint8Array })
+  type: string
+  receivedTime!: number
+  constructor(type: string, payload: { data: Uint8Array }) {
+    this.type = type
+    this.data = payload.data
+  }
 }
 
 export const createMidiEvent = (time: number, data: number[]) => {

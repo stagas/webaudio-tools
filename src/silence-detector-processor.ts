@@ -1,9 +1,11 @@
 export const SilenceDetector = {
   name: 'silence-detector',
   channelCount: 1,
+  channelCountMode: 'clamped-max',
+  channelInterpretation: 'speakers',
   numberOfInputs: 1,
   numberOfOutputs: 0,
-}
+} as AudioWorkletNodeOptions & { name: string }
 
 export type SilenceDetectorOptions = {
   seconds?: number

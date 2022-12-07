@@ -42,9 +42,7 @@ export class SilenceDetectorNode extends AudioWorkletNode {
     } = {},
   ) {
     await this.register(context)
-    Object.assign(options, SilenceDetector)
-    const node = new this(context, options)
-    return node
+    return new this(context, { ...options, ...SilenceDetector })
   }
 
   /** Event callback that fires when node detects silence */
