@@ -1,3 +1,4 @@
+export * from 'pipe-processor'
 export * from './db'
 export * from './fetch-audio-buffer'
 export * from './fft-log-indexer'
