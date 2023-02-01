@@ -1,7 +1,7 @@
 
 
 <h1>
-webaudio-tools <a href="https://npmjs.org/package/webaudio-tools"><img src="https://img.shields.io/badge/npm-v2.1.0-F00.svg?colorA=000"/></a> <a href="src"><img src="https://img.shields.io/badge/loc-198-FFF.svg?colorA=000"/></a> <a href="https://cdn.jsdelivr.net/npm/webaudio-tools@2.1.0/dist/webaudio-tools.min.js"><img src="https://img.shields.io/badge/brotli-1.5K-333.svg?colorA=000"/></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-F0B.svg?colorA=000"/></a>
+webaudio-tools <a href="https://npmjs.org/package/webaudio-tools"><img src="https://img.shields.io/badge/npm-v2.1.1-F00.svg?colorA=000"/></a> <a href="src"><img src="https://img.shields.io/badge/loc-200-FFF.svg?colorA=000"/></a> <a href="https://cdn.jsdelivr.net/npm/webaudio-tools@2.1.1/dist/webaudio-tools.min.js"><img src="https://img.shields.io/badge/brotli-1.6K-333.svg?colorA=000"/></a> <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-F0B.svg?colorA=000"/></a>
 </h1>
 
 <p></p>
