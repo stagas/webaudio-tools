@@ -24,6 +24,9 @@ export const createMidiEvent = (time: number, data: number[]) => {
 export const createMidiNoteEvents = (time: number, note: number, velocity: number, length: number) => {
   const midiEvents = []
 
+  note = Math.max(0, Math.min(127, note))
+  velocity = Math.max(0, Math.min(127, velocity))
+
   {
     const midiEvent = createMidiEvent(time, [
       MidiOp.NoteOn,
